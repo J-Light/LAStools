@@ -15,7 +15,7 @@ include_directories( BEFORE LASzip/src LASlib/inc  )
 file( GLOB LASLIB_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/LASlib/src/*.cpp")
 file( GLOB LASZIP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/LASzip/src/*.cpp")
 
-add_library( las SHARED ${LASLIB_SOURCES} ${LASZIP_SOURCES} )
+add_library( las ${LASLIB_SOURCES} ${LASZIP_SOURCES} )
 
 install(TARGETS las
          DESTINATION lib)
